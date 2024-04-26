@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <link href="https://fonts.cdnfonts.com/css/simply-serif" rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/sigmar" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+        <script src="script.js"></script>
+        <title>Pagina - Sophia y Leslie</title>
+    </head>
+<style>
+    body {
+            background-color: rgb(238, 238, 238, 0.966);
+            color: #110909;
+            font-family: 'Simply Serif', sans-serif;
+            margin: 0;
+            padding: 10px;
+        }
+    section{
+            margin-left: 30%;
+            margin-right: 70px;
+        }
+    form{
+        margin-top: 20px;
+    }
+    input[type="submit"]{
+        background-color: rgb(197, 245, 185);
+        font-size: medium;
+        color: black;
+        padding: 20px 80px;
+        border: 10px;;
+        border-radius: 25px;
+        margin: 20px;
+        cursor: pointer;
+    }
+        header {
+            color:rgb(22, 6, 78);
+            padding: 20px;
+            font-family: 'Sigmar', sans-serif;
+        
+        }
+        header h1 {
+            color:rgb(22, 6, 78);
+            margin: 0;
+            padding: 0;
+            font-size: 36px;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color:darkgreen;
+            text-decoration: none;
+            font-size: 18px;
+            font-family: 'Simply Serif', sans-serif;
+        }
+        
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .mensaje-confirmacion {
+        display: none;
+        background-color: white;
+        border: 1px solid black;
+        color: black;
+        padding: 10px;
+        margin-top: 10px;
+    }
+</style>
+<body>
+<header>
+    <h1>Sustentabilidad y Medio Ambiente</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="codigo2.html">Medio Ambiente</a></li>
+            <li><a href="codigo4.html">Sustentabilidad</a></li>
+            <li><a href="codigo3.html">Dia Mundial del Medio Ambiente</a></li>
+            <li><a href="formulario.html">Registrarse</a></li>
+            <li><a href="codigo6.html">Organizaciones</a></li>
+        </ul>
+    </nav>
+</header>
+    <section id="contacto">
+        <h2>Registrate</h2>
+        <form action="#" method="post">
+            <label for="nombre">Nombres:</label><br>
+            <input type="text" id="nombre" name="nombre" required><br>
+            <label for="apellido">Apellidos:</label><br>
+            <input type="apellido" id="apellido" name="apellido"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="fechadenacimiento">fecha de nacimiento:</label><br>
+            <input type="date" id="date" name="date"><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+
+
+<div id="mensajeExito" class="mensaje-confirmacion">¡Te has registrado correctamente!</div>
+
+<script>
+    document.getElementById("contacto").addEventListener("submit", function(event){
+        
+        event.preventDefault();
+        
+        document.getElementById("mensajeExito").style.display = "block";
+        
+        setTimeout(function(){
+            document.getElementById("mensajeExito").style.display = "none";
+        }, 3000);
+    });
+</script>
+</body>
+</html>
